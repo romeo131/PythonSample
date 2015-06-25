@@ -3,8 +3,7 @@ import sys
 import time
 
 def usage():
-	print("""
-    
+    print ("""
 Usage
 =====
 python %s -v : View memo
@@ -14,11 +13,11 @@ python %s -a : Add memo
 if not sys.argv[1:] or sys.argv[1] not in ['-v', '-a']:
     usage()
 elif sys.argv[1] == '-v':
-    try: print(open("memo.txt").read())
-    except IOError: print("memo does not exist")
-elif sys.argv[1]=='-a':
-    word = input("enter memo: ")
-    f=open("memo.txt", 'a')
-    f.write(time.ctime() + ': ' + word + '\n')
+    try: print ("%s" % open("memo.txt").read())
+    except IOError: print ("memo does not exist!")
+elif sys.argv[1] == '-a':
+    word = input("Enter memo: ")
+    f = open("memo.txt", 'a')
+    f.write(time.ctime() + ': ' + word+'\n')
     f.close()
-    print("Added")
+    print ("Added")
