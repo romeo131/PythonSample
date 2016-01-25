@@ -17,4 +17,6 @@ data = cursor.fetchone()
 print "Database version : %s " % data
 
 # disconnect from server
-db.close()
+db.close
+
+#added 01/25/2016 from IntelliJ
